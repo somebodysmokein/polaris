@@ -20,6 +20,170 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
+/* export const MyStory = {
+  parameters: {
+    variants: {
+      enable: true,
+    },
+  },
+}; */
+
+export const Variations = (args) => <Button {...args} />;
+
+Variations.args = {
+  disabled: false,
+  download: false,
+  target: false,
+  submit: false,
+  loading: false,
+  pressed: false,
+  accessibilityLabel: false,
+  role: false,
+  ariaControls: false,
+  ariaExpanded: false,
+  ariaDescribedBy: false,
+  ariaChecked: false,
+  icon: {PlusMinor},
+  primary: true,
+  outline: false,
+  destructive: false,
+  disclosure: false,
+  plain: false,
+  monochrome: false,
+  removeUnderline: false,
+  size: 'large',
+  textAlign: false,
+  fullWidth: false,
+  connectedDisclosure: false,
+  dataPrimaryLink: false,
+  primarySuccess: false,
+};
+
+export const MyStory = Variations.bind({});
+MyStory.parameters = {
+  variants: {
+    enable: true,
+  },
+};
+
+/* export const destructive = Variations.bind({});
+
+destructive.args = {
+  primary: false,
+  destructive: true,
+  icon: CancelSmallMinor,
+  size: 'large',
+};
+
+export const outline = Variations.bind({});
+
+outline.args = {
+  primary: false,
+  destructive: true,
+  icon: CancelSmallMinor,
+  size: 'large',
+};
+
+export const disclosre = Variations.bind({});
+
+disclosre.args = {
+  primary: true,
+  destructive: false,
+  size: 'large',
+  disclosure: true,
+};
+
+export const disabled = Variations.bind({});
+
+disabled.args = {
+  primary: true,
+  destructive: false,
+  icon: CancelSmallMinor,
+  size: 'large',
+  disabled: true,
+}; */
+
+/* export const fullWidth = Variations.bind({});
+
+fullWidth.args = {
+  primary: true,
+  destructive: false,
+  icon: CancelSmallMinor,
+  size: 'large',
+  disabled: true,
+};
+
+fullWidth.parameters = {
+  percy: {
+    additionalSnapshots: [
+      {
+        suffix: ' - fullWidth',
+        args: {
+          primary: true,
+          destructive: false,
+          icon: CancelSmallMinor,
+          size: 'large',
+          disabled: true,
+        },
+      },
+    ],
+  },
+}; */
+
+Variations.parameters = {
+  // take additional snapshots of various states
+  percy: {
+    additionalSnapshots: [
+      {
+        suffix: ' - Primary',
+        args: {
+          primary: true,
+          destructive: false,
+          icon: PlusMinor,
+          size: 'large',
+        },
+      },
+      {
+        suffix: ' - Destructive',
+        args: {
+          primary: false,
+          destructive: true,
+          icon: CancelSmallMinor,
+          size: 'large',
+        },
+      },
+      {
+        suffix: ' - outline',
+        args: {
+          primary: false,
+          destructive: true,
+          icon: CancelSmallMinor,
+          size: 'large',
+          outline: true,
+        },
+      },
+      {
+        suffix: ' - disabled',
+        args: {
+          primary: true,
+          icon: CancelSmallMinor,
+          size: 'large',
+          disabled: true,
+        },
+      },
+      {
+        suffix: ' - disclosre',
+        args: {
+          primary: true,
+          size: 'large',
+          icon: PlusMinor,
+          disclosure: true,
+        },
+      },
+    ],
+  },
+};
+
 export function All() {
   return (
     <div>

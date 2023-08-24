@@ -22,6 +22,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-toolbars',
     '@storybook/addon-viewport',
+    'storybook-addon-variants',
   ],
   webpackFinal: (config) => {
     const extraRules = [
