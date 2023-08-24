@@ -45,6 +45,7 @@
     "build:js": "rollup -c",
     "build:validate": "node scripts/build-validate.js",
     "dev": "yarn run storybook",
+    "visual": "percy storybook:start -v -i Disclosre* --partial",
     "lint": "run-p lint:*",
     "lint:js": "TIMING=1 eslint --cache .",
     "lint:styles": "stylelint '**/*.{css,scss}' --quiet",
@@ -62,7 +63,8 @@
     "@types/react-dom": "*",
     "@types/react-transition-group": "^4.4.2",
     "react-fast-compare": "^3.2.0",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "storybook-addon-variants": "^0.2.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -70,6 +72,8 @@
   },
   "devDependencies": {
     "@changesets/get-release-plan": "^3.0.13",
+    "@percy/cli": "^1.26.3",
+    "@percy/storybook": "^4.3.6",
     "@shopify/jest-dom-mocks": "^3.0.5",
     "@shopify/postcss-plugin": "^5.0.1",
     "@shopify/react-testing": "^4.1.0",

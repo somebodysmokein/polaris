@@ -30,7 +30,7 @@ export default {
 
 export const Variations = (args) => <Button {...args} />;
 
-Variations.args = {
+/* Variations.args = {
   disabled: false,
   download: false,
   target: false,
@@ -57,14 +57,21 @@ Variations.args = {
   connectedDisclosure: false,
   dataPrimaryLink: false,
   primarySuccess: false,
+}; */
+
+Variations.args = {
+  primary: false,
+  destructive: true,
+  icon: CancelSmallMinor,
+  size: 'large',
 };
 
-export const MyStory = Variations.bind({});
+/* export const MyStory = Variations.bind({});
 MyStory.parameters = {
   variants: {
     enable: true,
   },
-};
+}; */
 
 /* export const destructive = Variations.bind({});
 
