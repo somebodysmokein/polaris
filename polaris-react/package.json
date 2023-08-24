@@ -45,7 +45,7 @@
     "build:js": "rollup -c",
     "build:validate": "node scripts/build-validate.js",
     "dev": "yarn run storybook",
-    "visual": "percy storybook:start -v -i Disclosre* --partial",
+    "visual": "percy storybook:start -v -i Variations* --partial",
     "lint": "run-p lint:*",
     "lint:js": "TIMING=1 eslint --cache .",
     "lint:styles": "stylelint '**/*.{css,scss}' --quiet",

@@ -62,7 +62,7 @@ export const Variations = (args) => <Button {...args} />;
 Variations.args = {
   primary: false,
   destructive: true,
-  icon: CancelSmallMinor,
+  icon: PlusMinor,
   size: 'large',
 };
 
@@ -73,7 +73,7 @@ MyStory.parameters = {
   },
 }; */
 
-/* export const destructive = Variations.bind({});
+export const destructive = Variations.bind({});
 
 destructive.args = {
   primary: false,
@@ -108,7 +108,7 @@ disabled.args = {
   icon: CancelSmallMinor,
   size: 'large',
   disabled: true,
-}; */
+};
 
 /* export const fullWidth = Variations.bind({});
 
@@ -183,6 +183,7 @@ Variations.parameters = {
         args: {
           primary: true,
           size: 'large',
+          destructive: false,
           icon: PlusMinor,
           disclosure: true,
         },
